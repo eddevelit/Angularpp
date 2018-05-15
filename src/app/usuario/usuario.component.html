@@ -1,0 +1,27 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text" name="nombre" [(ngModel)]="nombre" class="form-control" aria-describedby="emailHelp" placeholder="Ingresa email">
+      <label for="correo">Correo</label>
+      <input id="correo" type="email" name="correo" [(ngModel)]="correo" class="form-control" placeholder="Ingresa nombre">
+    </div>
+    <div class="form-group">
+      <label for=""></label>
+      <select name="opcion" class="form-control" [(ngModel)]="opcion">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+    <ul>
+      <li>{{nombre}}</li>
+      <li>{{correo}}</li>
+      <li>{{opcion}}</li>
+    </ul>
+  <button (click)="cambiaNombre()">Cambiar nombre</button>
+</div>
